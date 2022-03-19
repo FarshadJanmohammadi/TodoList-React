@@ -22,7 +22,7 @@
 }
 
 .todo-item-container::-webkit-scrollbar {
-  width: 15px;
+  width: 8px;
 }
 .todo-item-container::-webkit-scrollbar {
   max-height: 50vh;
