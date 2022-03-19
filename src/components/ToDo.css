@@ -25,7 +25,7 @@
   font-size: 1.5rem;
   color: var(--clr-green);
   background-color: transparent;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .todo-container button:nth-child(3) {
