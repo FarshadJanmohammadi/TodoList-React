@@ -6,7 +6,7 @@
 }
 
 .container {
-  width: clamp(350px, 50%, 500px);
+  width: clamp(330px, 50%, 500px);
   max-height: 90vh;
   background-color: var(--clr-white);
   border-radius: 5px;
