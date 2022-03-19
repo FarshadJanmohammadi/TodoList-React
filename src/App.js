@@ -82,7 +82,7 @@ class App extends Component {
     localStorage.removeItem(id);
 
     this.setState({ items: newStateFiltered });
-    toast.error("کار مورد نظر با موفقیت حذف شد", {
+    toast.error("حذف با موفقیت انجام شد.", {
       position: "top-center",
       closeOnClick: true,
       autoClose: 1000,
