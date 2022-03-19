@@ -39,7 +39,7 @@ class App extends Component {
     const newState = { ...this.state };
     const { items, item, itemid } = newState;
     if (item === "" || item === " ") {
-      toast.error("یک عنوان برای کار موردنظر وارد نمایید.", {
+      toast.error("یک عنوان وارد نمایید.", {
         position: "top-center",
         closeOnClick: true,
         autoClose: 1000,
@@ -82,7 +82,7 @@ class App extends Component {
     localStorage.removeItem(id);
 
     this.setState({ items: newStateFiltered });
-    toast.error("مورد مورد نظر با موفقیت حذف شد", {
+    toast.error("کار مورد نظر با موفقیت حذف شد", {
       position: "top-center",
       closeOnClick: true,
       autoClose: 1000,
