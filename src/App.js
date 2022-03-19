@@ -38,7 +38,7 @@ class App extends Component {
   handleCreateNewTodo = () => {
     const newState = { ...this.state };
     const { items, item, itemid } = newState;
-    if (item === "" && item === "") {
+    if (item === "" || item === " ") {
       toast.error("یک عنوان برای کار موردنظر وارد نمایید.", {
         position: "top-center",
         closeOnClick: true,
@@ -46,7 +46,7 @@ class App extends Component {
         closeButton: true,
       });
     }
-    if (itemid === 0 && item !== "") {
+    if (itemid === 0 && item !== "" && item !== " ") {
       const newTodo = { id: new Date().getTime(), todoTitle: item };
       localStorage.setItem(newTodo.id, JSON.stringify(newTodo));
       items.push(newTodo);
