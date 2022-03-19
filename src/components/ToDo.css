@@ -9,6 +9,9 @@
   transition: all 200ms ease-in-out;
   border: 3px solid var(--clr-primary-3);
 }
+.todo-container:active {
+  transform: scale(0.9);
+}
 
 .todo-container:hover {
   background-color: var(--clr-primary-3);
