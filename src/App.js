@@ -67,7 +67,7 @@ class App extends Component {
       localStorage.setItem(itemid, JSON.stringify(items[index]));
 
       this.setState({ items, itemid: 0, item: "" });
-      toast.success("ویرایش با موفقیت ثبت شد", {
+      toast.success("ویرایش با موفقیت ثبت شد.", {
         position: "top-center",
         closeOnClick: true,
         autoClose: 2000,
