@@ -53,7 +53,6 @@ class App extends Component {
       const newTodo = { id: new Date().getTime(), todoTitle: item };
 
       localStorage.setItem(newTodo.id, JSON.stringify(newTodo));
-      // const getItem = JSON.parse(localStorage.getItem(newTodo.id));
       items.push(newTodo);
       this.setState({ items, item: "", alertMassage, showAlert: true });
 
@@ -68,8 +67,6 @@ class App extends Component {
       const { items, item, itemid } = newStateEdit;
       const index = items.findIndex((p) => p.id === itemid);
       items[index].todoTitle = item;
-
-      // newTodo.todoTitle = item;
 
       localStorage.setItem(itemid, JSON.stringify(items[index]));
 
@@ -99,7 +96,6 @@ class App extends Component {
     id = Number(id);
     const newState = { ...this.state };
     const { items } = newState;
-    // let { item: newItem } = newState;
     items.forEach((p) => {
       if (p.id === id) {
         newState.item = p.todoTitle;
