@@ -51,7 +51,7 @@ class Ui extends Component {
         </div>
         <footer>
           <a href="https://github.com/farshadjanmohammadi">
-            Made with <i class="fas fa-heart"></i> by Farshad Janmohammadi
+            Made with <i className="fas fa-heart"></i> by Farshad Janmohammadi
           </a>
         </footer>
       </div>
