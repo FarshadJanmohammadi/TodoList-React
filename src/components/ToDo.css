@@ -1,0 +1,36 @@
+.todo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: var(--border-radius-low);
+  margin-top: 10px;
+  margin: 10px 0px 0px 5px;
+  transition: all 200ms ease-in-out;
+}
+
+.todo-container:hover {
+  background-color: var(--clr-primary-3);
+}
+
+.todo-container h1:nth-child(1) {
+  flex: 20 1 0;
+  font-size: 1.3rem;
+  color: var(--clr-black);
+  word-break: break-all;
+}
+
+.todo-container button:nth-child(2) {
+  flex: 2 1 0;
+  font-size: 1.5rem;
+  color: var(--clr-green);
+  background-color: transparent;
+  margin-left: 5px;
+}
+
+.todo-container button:nth-child(3) {
+  flex: 2 1 0;
+  font-size: 1.5rem;
+  color: var(--clr-red);
+  background-color: transparent;
+}

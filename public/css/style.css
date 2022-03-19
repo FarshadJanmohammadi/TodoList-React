@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Yekan";
+  src: url("../fonts/yekan-font/WeblogmaYekan.eot");
+  src: url("../fonts/yekan-font/WeblogmaYekan.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/yekan-font/WeblogmaYekan.woff2") format("woff2"),
+    url("../fonts/yekan-font/WeblogmaYekan.woff") format("woff"),
+    url("../fonts/yekan-font/WeblogmaYekan.ttf") format("truetype"),
+    url("../fonts/yekan-font/WeblogmaYekan.svg#WeblogmaYekan") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-size: 16px;
+  --clr-primary-1: #f1f5f8;
+  --clr-primary-2: #063251;
+  --clr-primary-3: #a5d5f8;
+  --clr-primary-4: #617d98;
+  --clr-white: #ffffff;
+  --clr-red: #e74c3c;
+  --clr-green: #27ae60;
+  --clr-black: #2d3436;
+  --clr-gray: #7f8c8d;
+  --box-shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --font-family-primary: "Yekan", sans-serif;
+  --border-radius-low: 5px;
+  --border-radius-hi: 10px;
+  --border-radius-circle: 100%;
+  --transition-linear: all 0.3 linear;
+}
