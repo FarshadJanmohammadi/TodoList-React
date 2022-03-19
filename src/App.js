@@ -1,16 +1,10 @@
 import React, { Component } from "react";
 import Ui from "./components/Ui";
+import { ToastContainer, toast } from "react-toastify";
 
 class App extends Component {
-  state = { items: [], item: "", itemid: 0, alertMassage: [], showAlert: false };
+  state = { items: [], item: "", itemid: 0 };
 
-  componentDidUpdate = () => {
-    if (this.state.showAlert === true) {
-      setTimeout(() => {
-        this.setState({ showAlert: false });
-      }, 500);
-    }
-  };
   componentDidMount = () => {
     const newItems = [...this.state.items];
     const keys = Object.keys(localStorage).sort((a, b) => a - b);
@@ -22,14 +16,17 @@ class App extends Component {
   };
   render() {
     return (
-      <Ui
-        todoItems={this.state}
-        onChangeState={this.changeState}
-        onCreate={this.handleCreateNewTodo}
-        onDelete={this.handleDelete}
-        onEdite={this.handleEdite}
-        onDeleteAll={this.handleDeleteAll}
-      />
+      <>
+        <Ui
+          todoItems={this.state}
+          onChangeState={this.changeState}
+          onCreate={this.handleCreateNewTodo}
+          onDelete={this.handleDelete}
+          onEdite={this.handleEdite}
+          onDeleteAll={this.handleDeleteAll}
+        />
+        <ToastContainer />
+      </>
     );
   }
 
@@ -39,28 +36,27 @@ class App extends Component {
   };
 
   handleCreateNewTodo = () => {
-    console.log("first");
     const newState = { ...this.state };
-    const { items, item, itemid, alertMassage } = newState;
-    const newMassage = {
-      id: 1,
-      massage: "لطفا یک عنوان برای کار موردنظر خود وارد نمایید.",
-    };
-
-    alertMassage[0] = newMassage;
-    this.setState({ alertMassage, showAlert: true });
+    const { items, item, itemid } = newState;
+    if (item === "" && item === "") {
+      toast.error("یک عنوان برای کار موردنظر وارد نمایید.", {
+        position: "top-center",
+        closeOnClick: true,
+        autoClose: 1000,
+        closeButton: true,
+      });
+    }
     if (itemid === 0 && item !== "") {
       const newTodo = { id: new Date().getTime(), todoTitle: item };
-
       localStorage.setItem(newTodo.id, JSON.stringify(newTodo));
       items.push(newTodo);
-      this.setState({ items, item: "", alertMassage, showAlert: true });
-
-      const newMassage = {
-        id: 2,
-        massage: "یک مورد جدید به لیست کار‌ها اضافه شد.",
-      };
-      alertMassage[0] = newMassage;
+      this.setState({ items, item: "" });
+      toast.success("یک مورد با موفقیت اضافه شد.", {
+        position: "top-center",
+        closeOnClick: true,
+        autoClose: 2000,
+        closeButton: true,
+      });
     }
     if (itemid !== 0) {
       const newStateEdit = { ...this.state };
@@ -70,13 +66,13 @@ class App extends Component {
 
       localStorage.setItem(itemid, JSON.stringify(items[index]));
 
-      const newMassage = {
-        id: 3,
-        massage: "ویرایش با موفقیت ثبت شد.",
-      };
-      alertMassage[0] = newMassage;
-
-      this.setState({ items, itemid: 0, item: "", alertMassage, showAlert: true });
+      this.setState({ items, itemid: 0, item: "" });
+      toast.success("ویرایش با موفقیت ثبت شد", {
+        position: "top-center",
+        closeOnClick: true,
+        autoClose: 2000,
+        closeButton: true,
+      });
     }
   };
 
@@ -84,13 +80,14 @@ class App extends Component {
     const newState = [...this.state.items];
     const newStateFiltered = newState.filter((p) => p.id !== id);
     localStorage.removeItem(id);
-    const { alertMassage } = this.state;
-    const newMassage = {
-      id: 4,
-      massage: "حذف با موفقیت انجام شد.",
-    };
-    alertMassage[0] = newMassage;
-    this.setState({ items: newStateFiltered, alertMassage, showAlert: true });
+
+    this.setState({ items: newStateFiltered });
+    toast.error("مورد مورد نظر با موفقیت حذف شد", {
+      position: "top-center",
+      closeOnClick: true,
+      autoClose: 1000,
+      closeButton: true,
+    });
   };
   handleEdite = (input, id) => {
     id = Number(id);
@@ -107,13 +104,13 @@ class App extends Component {
 
   handleDeleteAll = () => {
     localStorage.clear();
-    const { alertMassage } = this.state;
-    const newMassage = {
-      id: 5,
-      massage: "تمامی کارها با موفقیت حذف شد.",
-    };
-    alertMassage[0] = newMassage;
-    this.setState({ items: [], item: "", alertMassage, showAlert: true });
+    this.setState({ items: [], item: "" });
+    toast.error("تمامی موارد با موفقیت حذف شدند.", {
+      position: "top-center",
+      closeOnClick: true,
+      autoClose: 2000,
+      closeButton: true,
+    });
   };
 }
 

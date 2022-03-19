@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Alert from "./Alert";
 import ToDo from "./ToDo";
 import "./Ui.css";
 
@@ -14,11 +13,6 @@ class Ui extends Component {
 
     return (
       <div className="ui-container">
-        {this.props.todoItems.alertMassage.length !== 0 && this.props.todoItems.showAlert ? (
-          <Alert ref={this.alertRef} alert={this.props.todoItems} />
-        ) : (
-          <p>&nbsp;</p>
-        )}
         <div className="container">
           <h1 className="main-title">مدیریت کارهای روزانه</h1>
           <form>
