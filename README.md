@@ -2,22 +2,14 @@
 
 Made a Todo using ReactJs Library and using Local Stroge To store lists that the user enters.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Screenshots
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
+![App Screenshot1](https://github.com/FarshadJanmohammadi/images/blob/main/ToDoList.jpg?raw=true)
 
 ## Authors
 
-- [@FarshadJanmohammadi](https://www.github.com/farshadjanmohammadi)
+- [Farshad Janmohammadi](https://www.FarshadJanmohammadi.ir)
 
 ## Color Reference
 
@@ -34,15 +26,15 @@ You may also see any lint errors in the console.
 
 
 
-## Demo
 
-Insert gif or link to demo:
+## Demo Online 
+
 https://practical-tereshkova-89d32f.netlify.app
 
 
 ## 🚀 About Me
 I'm a Front-end web developer with advanced skills in all stages of web development. Full familiarity in the process of user interface, testing and troubleshooting. Specialist in the design, installation, testing and maintenance of web systems. Has a diverse set of programming skills. Skilled in:
-HTML, CSS, JavaScript(ES6) ,JQuery, ReactJS, Redux, Typescript, Sass, Bootstrap, Git, GraphQL 
+HTML, CSS, JavaScript(ES6) ,JQuery, ReactJS, Redux, Next, MaterialUI, Typescript, Sass, Bootstrap, Git, TailWind
 With the ability to carry out projects individually and in groups.
 
 
@@ -54,6 +46,8 @@ With the ability to carry out projects individually and in groups.
 
 ## 🛠 Skills
 
-HTML, CSS, JavaScript(ES6) ,JQuery, ReactJS, Redux, Typescript, Sass, Bootstrap, Git, GraphQL 
+HTML, CSS, JavaScript(ES6) ,JQuery, ReactJS, Redux, Next, MaterialUI, Typescript, Sass, Bootstrap, Git, TailWind
+
+
 
 
